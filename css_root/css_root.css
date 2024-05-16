@@ -1,7 +1,19 @@
 :root {
-    --clr-primary: black;
-    --clr-secondary: white;
-    --clr-accent: turquoise;
-    --clr-highlight: #ffd6c2;
-
+    --clr-background: black;
+    --clr-foreground: white;
+    --clr-primary: rgb(24, 92, 85);
+    --clr-accent: rgb(241, 239, 69);
+    --clr-highlight: salmon;
+    --ff: sans-serif;
+    --h1: bold max(36px, 4vw) / max(48px, 5vw) var(--ff);
+    --h2: bold max(36px, 4vw) / max(36px, 4vw) var(--ff);
+    --h3: bold max(24px, 2vw) / max(30px, 2.5vw) var(--ff);
+    --links: bold max(18px, 1.5vw) / max(18px, 1.5vw) var(--ff);
+    --p: bold max(18px, 1.5vw) / max(30px, 2.5vw) var(--ff);
+    --subtext: bold max(12px, 1vw) / max(20px, 1.66vw) var(--ff);
+    --transition: 0.3s ease-in-out;
+    --shadow: #00000030 0px 0px 10px 0px;
+    --shadowdark: #00000030 0px 5px 10px 5px;
 }
+
+

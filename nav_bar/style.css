@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    --bg-body: hsl(0, 0%, 8%);
+    --bg-body2: hsl(0, 0%, 14%);
+    --accent: hsl(153, 71%, 59%);
+    --text1: hsl(0, 0%, 100%);
+    --text2: hsl(0, 0%, 85%);
+    --invalid: hsl(7, 100%, 68%);
+    --body-font: 'Open Sans', Arial, sans-serif;
+    --linkPink: rgb(216, 29, 216);
+    --linkPurple: rgb(98, 16, 250);
+    --fs-18: 1.125rem;
+    --fs-88: 5.5rem;
+    --fs-72: 4.5rem;
+    --fs-40: 2.5rem;
+    --fs-48: 3rem;
+    --fs-36: 2.25rem;
+    --fs-32: 2rem;
+    --fs-24: 1.5rem;
+    --fs-20: 1.25rem;
+    --container: 69.375rem;
+    --transition: 250ms ease-in-out;
+  }
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    background: var(--bg-body);
+    font-family: var(--body-font);
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+*, a {
+    color: var(--text1);
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        right: 0px;
+        bottom: -3px;
+        left: 0px;
+        background-color: var(--linkPink);
+    }
+
+    &:hover {
+        color: var(--linkPink);
+        &::before {
+            background: linear-gradient(to right, var(--linkPink) 35%, var(--linkPurple) 65%);
+        }
+    }
+}
+
+nav {
+    margin-bottom: 4rem;
+    padding: 10px;
+    font-size: 1.5rem;
+
+    @media (min-width: 600px) {
+        padding: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    a {
+        font-size: 1.25rem;
+
+        @media (min-width: 42em) {
+            font-size: 2rem;
+        }
+    }
+}
+
+nav.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 600px) {
+        justify-content: space-between;
+    }
+
+    > a {
+        margin-bottom: 10px;
+        @media (min-width: 600px) {
+            margin-bottom: 0px;
+        }
+    }
+
+    .fullwidth {
+        flex: 1 0 100%;
+        justify-content: center;
+        @media (min-width: 600px) {
+            flex: 0 1 auto;
+        }
+    }    
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+    ul li {
+        flex: 0 0 100px;
+        margin-right: 10px;
+        text-align: center;
+
+        @media (min-width: 600px) {
+            flex: 0 0 auto;
+            margin-right: 20px;
+        }
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+
